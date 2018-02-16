@@ -59,6 +59,9 @@ public class MainActivity extends AppCompatActivity {
         // Ensure that there's a camera activity to handle the intent
         if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
 
+            //take a picture and pass results to onActivityResult
+            startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
+
             // Create the file where the photo should go
             File photoFile = null;
             try {
@@ -66,6 +69,8 @@ public class MainActivity extends AppCompatActivity {
             } catch (IOException ex) {
                 // Error occurred while creating the File
             }
+
+
 //            // Continue only if the file was successfully created
 //            if (photoFile != null) {
 //                //uri used to identify a resource
@@ -77,11 +82,6 @@ public class MainActivity extends AppCompatActivity {
 //            }
 
 
-
-
-
-            //take a picture and pass results to onActivityResult
-            startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
         }
     }
 
