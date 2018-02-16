@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">CalendarCapture</string>
+    <string name="button_send">Take A Photo</string>
 </resources>
